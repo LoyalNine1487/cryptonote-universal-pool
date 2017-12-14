@@ -12,10 +12,8 @@
 #
 
 # System Updates and Pool Requirements
-yes | sudo apt -y --force-yes update
-yes | sudo apt -y --force-yes upgrade
-sudo apt install libssl-dev libboost-all-dev build-essential tcl curl gcc g++ cmake screen -y
-sudo apt install libtool autotools-dev autoconf pkg-config libssl-dev
+sudo apt update
+sudo apt install libssl-dev libboost-all-dev build-essential tcl curl gcc g++ cmake screen python libtool autotools-dev autoconf pkg-config libssl-dev -y
 # Install Redis
 cd /tmp
 curl -O http://download.redis.io/redis-stable.tar.gz
