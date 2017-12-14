@@ -49,7 +49,7 @@ case "$choice" in
   y|Y ) sudo apt install libtool autotools-dev autoconf pkg-config libssl-dev;
         sudo add-apt-repository ppa:bitcoin/bitcoin;
         apt update; 
-        apt install libdb4.8-dev libdb4.8++-dev;
+        apt install libdb4.8-dev libdb4.8++-dev -y;
         cd ~;
         mkdir monero;
         wget https://downloads.getmonero.org/cli/monero-linux-x64-v0.11.1.0.tar.bz2;
@@ -84,13 +84,13 @@ esac
 # You will need to update the config in the fouture
 read -p "Do you want to use the example config? (y/n)?" choice
 case "$choice" in 
-  y|Y ) cp ./config_exmaple.json ./config.json;;
+  y|Y ) cp config_exmaple.json config.json;;
   n|N ) echo "no";;
   * ) echo "invalid, Please say y or n";;
 esac
 read -p "Use coustom config(Please place config in your home folder) (y/n)?" choice
 case "$choice" in 
-  y|Y ) cp ~/config.json ./config.json;;
+  y|Y ) cp ~/config.json config.json;;
   n|N ) echo "no";;
   * ) echo "invalid, Please say y or n";;
 esac
