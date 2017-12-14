@@ -65,7 +65,7 @@ esac
 
 # Install Pool
 cd /tmp
-git clone -b DEV https://github.com/LoyalNine1487/monero-universal-pool.git pool
+git clone -b DEV https://github.com/LoyalNine1487/cryptonote-universal-pool.git pool
 sudo mv ./pool /opt/pool
 cd /opt/pool
 npm update
